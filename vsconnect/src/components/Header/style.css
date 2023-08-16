@@ -109,7 +109,6 @@ header nav a {
     display: none;
 }
 
-/*MEDIA*/
 @media screen and (max-width: 768px) {
 
     /* HEADER */
@@ -162,45 +161,5 @@ header nav a {
     header nav svg {
         width: 35px;
         fill: var(--branco);
-    }
-
-    /* BANNER */
-    .banner_conteudo {
-        font-size: 14px;
-        max-width: 500px;
-    }
-
-    .banner_slogan_l2 {
-        margin: 30px;
-    }
-
-    .banner_botoes {
-        flex-direction: column;
-        gap: 30px;
-        margin-top: 30px;
-    }
-
-    .banner_botoes a {
-        align-self: center;
-    }
-
-
-    .span_dicas img,
-    .para_devs img,
-    .clientes_conteudo img {
-        display: none;
-    }
-
-    .clientes_texto,
-    .devs_texto {
-        text-align: center;
-    }
-
-    .para_devs {
-        padding: 0;
-    }
-
-    #main_home ul {
-        text-align: initial;
     }
 }
