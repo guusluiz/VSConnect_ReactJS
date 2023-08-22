@@ -36,15 +36,15 @@ function ListaServicos() {
 
     }
 
-    function listarServicos(){
+    function listarServicos() {
         api.get("servicos").then((response: any) => {
             console.log(response);
 
             setServicos(response.data)
         })
-        .catch((error: any)=> {
-            console.log("Error ao realizar uma requisição: ", error);
-        })
+            .catch((error: any) => {
+                console.log("Error ao realizar uma requisição: ", error);
+            })
     }
 
     useEffect(() => {
@@ -80,6 +80,7 @@ function ListaServicos() {
                                     servicos.map((servicos: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardServico
+                                                id={servicos.id}
                                                 titulo={servicos.nome}
                                                 valor={servicos.valor}
                                                 descricao={servicos.descricao}

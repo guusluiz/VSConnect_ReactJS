@@ -40,13 +40,13 @@ function ListaDevs() {
 
     function listarDesenvolvedores() {
         api.get("users").then((response: any) => {
-                console.log(response);
-                
-                setDevs(response.data)
-            })
-            .catch((error: any)=> {
+            console.log(response);
+
+            setDevs(response.data)
+        })
+            .catch((error: any) => {
                 console.log("Error ao realizar uma requisição: ", error);
-                
+
             })
     }
 
@@ -83,6 +83,7 @@ function ListaDevs() {
                                     devs.map((dev: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardDev
+                                                id={dev.id}
                                                 foto={dev.user_img}
                                                 nome={dev.nome}
                                                 email={dev.email}
