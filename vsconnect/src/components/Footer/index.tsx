@@ -47,10 +47,10 @@ function Footer() {
                                 <Link to={"lista/devs"}>Listar Desenvolvedores</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Cliente</Link>
+                                <Link to={"cadastro/usuario"}>Cadastrar Cliente ou Desenvolvedor</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Desenvolvedor</Link>
+                                <Link to={"cadastro/servico"}>Cadastrar Serviços</Link>
                             </li>
                         </ul>
                     </div>

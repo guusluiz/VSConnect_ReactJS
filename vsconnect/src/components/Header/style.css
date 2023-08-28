@@ -3,6 +3,11 @@ header {
     background-color: var(--azulP);
 }
 
+header nav span {
+    color: var(--branco);
+    font-size: 20px;
+}
+
 .header_conteudo {
     display: flex;
     justify-content: space-between;

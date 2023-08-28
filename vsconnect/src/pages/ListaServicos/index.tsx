@@ -84,7 +84,7 @@ function ListaServicos() {
                                                 titulo={servicos.nome}
                                                 valor={servicos.valor}
                                                 descricao={servicos.descricao}
-                                                listaTechs={servicos.techs}
+                                                techs={servicos.techs}
                                             />
                                         </li>
                                     })

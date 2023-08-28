@@ -1,7 +1,7 @@
 import "./style.css";
 
 //rotas
-import { Link } from "react-router-dom";    
+import { Link } from "react-router-dom";
 
 function CardServico(props: any) {
     return (
@@ -13,13 +13,10 @@ function CardServico(props: any) {
             <p>{props.descricao}</p>
             <div className="techs">
                 {
-                    props.listaTechs.map((tech: string, indice: number) => {
+                    props.techs.map((tech: string, indice: number) => {
                         return <span key={indice}>{tech}</span>
                     })
-                }
-                {/* <span>HTML</span>
-                <span>CSS</span>
-                <span>React</span> */}
+                }   
             </div>
         </div>
     );
