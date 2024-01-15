@@ -9,7 +9,7 @@
     font-family: var(--font2);
 }
 
-.grupo_contato {
+.card_dev .grupo_contato {
     height: 100%;
     width: 70%;
 
@@ -17,25 +17,26 @@
 
 }
 
-.contato_dev {
+.card_dev .contato_dev {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.grupo_contato img {
+.card_dev .grupo_contato img {
     height: 100%;
     border-radius: 50%;
     margin-right: 40px;
 }
 
-.grupo_contato h2 {
-    font-size: 24px;
-    font-family: var(--font2);
-    text-transform: capitalize;
+.card_dev .grupo_contato a{
+    font-size: 18px;
+    font-family: var(--font1);
+    color: white;
+
 }
 
-.grupo_contato p {
+.card_dev .grupo_contato p {
     font-size: 14px;
 }
 

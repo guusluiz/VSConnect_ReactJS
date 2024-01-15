@@ -1,5 +1,5 @@
 /* MAIN */
-#main_visualizarservico {
+#vs_main {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/images/background_login.png");
@@ -7,23 +7,41 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 50px;
 }
 
-#main_visualizarservico .container {
+#vs_main .container {
     max-width: 1400px;
     width: 90%;
     margin: 0 auto;
 }
 
-#main_visualizarservico h1 {
+#vs_main .glass{
+    border: solid 1px #909090;
+    border-radius: 16px;
+    background: linear-gradient(136deg, #ffffff1a 0%, #ffffff0b 100%);
+    backdrop-filter: blur(15px);
+    padding-bottom: 50px;
+}
+
+#vs_main h1 {
     text-align: center;
     color: var(--branco);
     font-family: var(--font1);
-    padding: 100px 0;
+    padding-top: 50px;
     font-size: 46px;
 }
 
-#main_visualizarservico .servico {
+#vs_main hr {
+    margin: 20px auto 50px;
+    width: 80%;
+    height: 4px;
+    background-color: var(--rosa);
+    border: none;
+    border-radius: 50%;
+}
+
+#vs_main .servico {
     width: 85%;
     margin: 0 auto;
     padding: 15px;
@@ -37,33 +55,34 @@
     color: var(--branco);
 }
 
-#main_visualizarservico .topo_servico {
+#vs_main .topo_servico {
     width: 100%;
 
     margin-bottom: 30px;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     font-size: 20px;
 }
 
-#main_visualizarservico .topo_servico h3 {
+#vs_main .topo_servico h3 {
     width: 65%;
 }
 
-#main_visualizarservico .servico p {
+#vs_main .servico p {
     margin-bottom: 30px;
 }
 
-#main_visualizarservico .servico .techs {
+#vs_main .servico .techs {
     max-width: 70%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#main_visualizarservico .servico .techs span {
+#vs_main .servico .techs span {
     font-size: 14px;
     padding: 2px 10px;
 

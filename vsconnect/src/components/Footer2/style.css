@@ -1,0 +1,33 @@
+/* FOOTER */
+#footer2{
+    background-color: #060821;
+    background-size: cover;
+    color: var(--branco);
+    padding-top: 50px;
+
+}
+
+#footer2 .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#footer2 .rodape>p {
+    font-family: var(--font2);
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* MEDIAS */
+@media screen and (max-width: 768px) {
+    /* FOOTER */
+    .span_dicas_texto{
+        width: 90%;
+        text-align: center;
+    }
+}

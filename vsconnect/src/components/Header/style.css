@@ -1,30 +1,39 @@
+#sombra {
+    position: fixed;
+    top: 0;
+    right: 110vW;
+    background-color: #000000a6;
+
+    width: 130vw;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    backdrop-filter: blur(10px);
+}
+
 /* HEADER */
 header {
     background-color: var(--azulP);
 }
 
-header nav span {
-    color: var(--branco);
-    font-size: 20px;
-}
-
-.header_conteudo {
+header .header_conteudo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
 }
 
-.menu_barras {
+header .menu_barras {
     display: none;
     z-index: 1;
 }
 
-.menu_barras>img {
+header .menu_barras>img {
     width: 50px;
 }
 
-.barras {
+header .barras {
     /* border-top: 5px solid var(--branco); */
     width: 40px;
     height: 5px;
@@ -36,7 +45,7 @@ header nav span {
     transition: .5s;
 }
 
-.barras::after {
+header .barras::after {
     content: '';
     display: block;
     width: 40px;
@@ -48,7 +57,7 @@ header nav span {
     transition: .5s;
 }
 
-.barras::before {
+header .barras::before {
     content: '';
     display: block;
     width: 40px;
@@ -75,7 +84,7 @@ header nav span {
     top: 0;
 }
 
-.header_logo {
+header .header_logo {
     width: 50%;
     max-width: 220px;
 }
@@ -103,14 +112,14 @@ header nav a {
     font-family: var(--font2);
 }
 
-.header_botao_login {
+header .header_botao_login {
     border: 4px solid var(--rosa);
     padding: 4px 30px;
     border-radius: 30%;
     font-family: var(--font1);
 }
 
-.header_icone_login {
+header .header_icone_login {
     display: none;
 }
 

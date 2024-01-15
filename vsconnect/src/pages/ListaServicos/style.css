@@ -1,10 +1,4 @@
-#main_listaservicos h2 {
-    font-family: var(--font1);
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-.botao {
+#ls_main .botao {
     font-family: var(--font1);
     color: var(--branco);
     text-transform: uppercase;
@@ -14,8 +8,8 @@
     box-shadow: 15px 15px 30px #00000066;
 }
 
-/* MAIN */
-#main_listaservicos {
+/* #ls_main */
+#ls_main {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/images/background_login.png");
@@ -25,15 +19,14 @@
     background-position: center;
 }
 
-.container_lista_servicos {
+#ls_main .container_lista_servicos {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 50px 0;
 }
 
-.lista_servicos_conteudo {
+#ls_main .lista_servicos_conteudo {
     width: 100%;
     max-width: 900px;
     
@@ -52,13 +45,13 @@
     color: var(--branco);
 }
 
-#main_listaservicos h1 {
+#ls_main h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-#main_listaservicos hr {
+#ls_main hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -67,16 +60,16 @@
     border-radius: 50%;
 }
 
-.lista_servicos_conteudo form {
+#ls_main .lista_servicos_conteudo form {
     width: 85%;
     padding: 20px 0;
 }
 
-.wrapper_lista {
+#ls_main .wrapper_lista {
     width: 85%;
 }
 
-.wrapper_form {
+#ls_main .wrapper_form {
     height: 95px;
     width: 85%;
     margin: 0 auto;
@@ -87,13 +80,13 @@
 
 }
 
-.wrapper_form label {
+#ls_main .wrapper_form label {
     font-family: var(--font2);
     text-transform: capitalize;
     font-size: 28px;
 }
 
-.campo-label input {
+#ls_main .campo-label input {
     height: 37px;
     width: 75%;
 
@@ -111,11 +104,11 @@
     caret-color: white;
 }
 
-.campo-label input:focus-visible {
+#ls_main .campo-label input:focus-visible {
     outline: 2px solid var(--branco);
 }
 
-.campo-label button {
+#ls_main .campo-label button {
     width: 20%;
 
     border: 4px solid var(--rosa);
@@ -127,23 +120,74 @@
     text-transform: uppercase;
 }
 
-.campo-label button:hover {
+#ls_main .campo-label button:hover {
     background-color: #8a214f;
     cursor: pointer;
 }
 
-.campo-label {
+#ls_main .campo-label {
     display: flex;
     justify-content: space-between;
 }
 
-.lista_servicos_conteudo ul {
+#ls_main .lista_servicos_conteudo ul {
     list-style: none;
     padding: 50px 0;
 }
 
-.lista_servicos_conteudo li {
+#ls_main .lista_servicos_conteudo li {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
+#ls_main .servico {
+    width: 85%;
+    margin: 0 auto;
+    padding: 15px;
+
+    border: solid 1px #909090;
+    border-radius: 16px;
+    background: linear-gradient(136deg, #ffffff1a 0%, #ffffff0b 100%);
+    backdrop-filter: blur(15px);
+
+    font-family: var(--font2);
+}
+
+#ls_main .topo_servico {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 20px;
+}
+
+#ls_main .topo_servico h3 {
+    width: 65%;
+}
+
+#ls_main .servico p {
+    margin-bottom: 30px;
+}
+
+#ls_main .techs {
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#ls_main .techs span {
+    font-size: 14px;
+    padding: 2px 10px;
+
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+    background-color: var(--rosa);
+    color: white;
+    font-weight: 600;
+}

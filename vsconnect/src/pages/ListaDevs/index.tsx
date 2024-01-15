@@ -8,56 +8,58 @@ import CardDev from "../../components/CardDev";
 import { useEffect, useState } from "react";
 
 import api from "../../utils/api";
+import Footer2 from "../../components/Footer2";
 
 function ListaDevs() {
-    const [devs, setDevs] = useState<any[]>([]);
+
+    //STATE DEVS
+    const [listaDevs, setListaDevs] = useState<any[]>([]);
 
     const [skillDigitado, setSkillDigitado] = useState<string>("");
 
     //função onde pega o que o usuario digitou
     function verificarCampoSkill(event: any) {
         if (event.target.value === "") {
-            listarDesenvolvedores();
+            setListaDevs(listaDevs);
         }
         setSkillDigitado(event.target.value);
     }
+
     function buscarDevPorSkill(event: any) {
         //não recarrega a pagina
         event.preventDefault();
 
         //filtrar devs pela skill digitada no campo buscar
-        const devsFiltrados = devs.filter((dev: any) => dev.hardSkills.includes(skillDigitado.toLocaleUpperCase()));
+        const devsFiltrados = listaDevs.filter((dev: any) => dev.skills.includes(skillDigitado.toLocaleUpperCase()));
 
         if (devsFiltrados.length === 0) {
             alert("Nenhum desenvolvedor(a) com essa skill :(")
         } else {
             //atribui valor de devs filtrado, ao state ListaDevsFiltrados 
-            setDevs(devsFiltrados);
+            setListaDevs(devsFiltrados);
         }
-
-
     }
 
     function listarDesenvolvedores() {
-        api.get("users").then((response: any) => {
-            console.log(response);
 
-            setDevs(response.data)
-        })
+        api.get("users")
+            .then((response: any) => {
+                console.log(response);
+                setListaDevs(response.data)
+            })
             .catch((error: any) => {
-                console.log("Error ao realizar uma requisição: ", error);
-
+                console.log("Error ao realizar um requisição:", error);
             })
     }
 
     useEffect(() => {
-        //executa ação após o componente ser recarregado
+        //executa uma ação após o componente ser recarregado
         listarDesenvolvedores();
     }, [])
 
     return (
         <>
-            <main id="main_listadevs">
+            <main id="ld_main">
                 <div className="container container_lista_devs">
                     <div className="lista_devs_conteudo">
                         <h1>Lista de Devs</h1>
@@ -71,6 +73,7 @@ function ListaDevs() {
                                         name="campo-busca"
                                         id="busca"
                                         placeholder="Buscar desenvolvedores por tecnologias..."
+                                        autoComplete="off"
                                         onChange={verificarCampoSkill}
                                     />
                                     <button type="submit">Buscar</button>
@@ -80,14 +83,14 @@ function ListaDevs() {
                         <div className="wrapper_lista">
                             <ul>
                                 {
-                                    devs.map((dev: any, indice: number) => {
+                                    listaDevs.map((dev: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardDev
-                                                id={dev.id}
-                                                foto={dev.user_img}
-                                                nome={dev.nome}
-                                                email={dev.email}
-                                                listaTechs={dev.hardSkills}
+                                                id = {dev.id}
+                                                foto = {dev.user_img}
+                                                nome = {dev.nome}
+                                                email = {dev.email}
+                                                listaTechs = {dev.hardSkills}
                                             />
                                         </li>
                                     })
@@ -97,6 +100,9 @@ function ListaDevs() {
                     </div>
                 </div>
             </main>
+
+            <Footer2/>
+
         </>
     );
 }

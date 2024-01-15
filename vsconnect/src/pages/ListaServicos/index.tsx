@@ -1,75 +1,69 @@
 import "./style.css";
 
-//components
+import Footer2 from "../../components/Footer2";
 import CardServico from "../../components/CardServico";
 
-//hooks
 import { useEffect, useState } from "react";
 
 import api from "../../utils/api";
 
 function ListaServicos() {
-    const [servicos, setServicos] = useState<any[]>([]);
 
-    const [tecnologiaDigitada, setTecnologiaDigitada] = useState<string>("");
+    const [listaServicos, setListaServicos] = useState<any[]>([]);
 
-    //função onde pega o que o usuario digitou
-    function verificarCampoTechs(event: any) {
-        if (event.target.value === "") {
-            listarServicos();
-        }
-        setTecnologiaDigitada(event.target.value);
-    }
-    function buscarServicoPorTechs(event: any) {
-        //não recarrega a pagina
-        event.preventDefault();
-
-        //filtrar devs pela skill digitada no campo buscar
-        const servicosFiltrados = servicos.filter((servico: any) => servico.techs.includes(tecnologiaDigitada.toLocaleUpperCase()));
-
-        if (servicosFiltrados.length === 0) {
-            alert("Nenhum desenvolvedor(a) com essa skill :(")
-        } else {
-            //atribui valor de devs filtrado, ao state ListaDevsFiltrados 
-            setServicos(servicosFiltrados);
-        }
-
-    }
+    const [skillDigitada, setSkillDigitada] = useState<string>("");
 
     function listarServicos() {
-        api.get("servicos").then((response: any) => {
-            console.log(response);
-
-            setServicos(response.data)
-        })
+        api.get("servicos")
+            .then((response: any) => {
+                setListaServicos(response.data);
+                
+            })
             .catch((error: any) => {
-                console.log("Error ao realizar uma requisição: ", error);
+                console.log("Error", error)
             })
     }
 
+    function verificarCampoFiltro(event: any) {
+        if (event.target.value == "") {
+            listarServicos();
+        }
+        setSkillDigitada(event.target.value);
+    }
+
+    function buscarServicoPorSkill(event: any) {
+        event.preventDefault();
+
+        const servicosFiltrados = listaServicos.filter((servico: any) => servico.techs.includes(skillDigitada.toLocaleUpperCase()));
+
+        if (servicosFiltrados.length === 0) {
+            alert("Nenhum serviço com essa skill :(")
+        } else {
+            setListaServicos(servicosFiltrados);
+        }
+    }
+
     useEffect(() => {
-        //executa ação após o componente ser recarregado
         listarServicos();
     }, [])
 
     return (
-        <>
-            <main id="main_listaservicos">
+        <div>
+            <main id="ls_main">
                 <div className="container container_lista_servicos">
                     <div className="lista_servicos_conteudo">
                         <h1>Lista de Serviços</h1>
                         <hr />
-                        <form method="post" onSubmit={buscarServicoPorTechs}>
+                        <form method="post" onSubmit={buscarServicoPorSkill}>
                             <div className="wrapper_form">
-                                <label htmlFor="busca">Procurar serviços</label>
+                                <label htmlFor="busca">Filtrar serviços por tecnologia</label>
                                 <div className="campo-label">
                                     <input
-                                        type="search"
-                                        name="campo-busca"
-                                        id="busca"
-                                        placeholder="Buscar serviços por tecnologias..."
-                                        onChange={verificarCampoTechs}
-                                    />
+                                        type="search" 
+                                        name="campo-busca" id="busca" 
+                                        placeholder="Buscar serviços por tecnologias..." 
+                                        onChange={verificarCampoFiltro}
+                                        />
                                     <button type="submit">Buscar</button>
                                 </div>
                             </div>
@@ -77,16 +71,18 @@ function ListaServicos() {
                         <div className="wrapper_lista">
                             <ul>
                                 {
-                                    servicos.map((servicos: any, indice: number) => {
-                                        return <li key={indice}>
-                                            <CardServico
-                                                id={servicos.id}
-                                                titulo={servicos.nome}
-                                                valor={servicos.valor}
-                                                descricao={servicos.descricao}
-                                                techs={servicos.techs}
-                                            />
-                                        </li>
+                                    listaServicos.map((servico: any, indice: number) => {
+                                        return (
+                                            <li key={indice}>
+                                                <CardServico
+                                                    id = {servico.id}
+                                                    titulo = {servico.nome}
+                                                    proposta = {servico.valor}
+                                                    listaTechs = {servico.techs}
+                                                    descricao = {servico.descricao}
+                                                />
+                                            </li>
+                                        )
                                     })
                                 }
                             </ul>
@@ -94,9 +90,8 @@ function ListaServicos() {
                     </div>
                 </div>
             </main>
-
-        </>
+            <Footer2 />
+        </div>
     );
 }
-
 export default ListaServicos;

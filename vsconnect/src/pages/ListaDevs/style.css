@@ -1,5 +1,5 @@
 /* MAIN */
-#main_listadevs {
+#ld_main {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/images/background_login.png");
@@ -9,7 +9,7 @@
     background-position: center;
 }
 
-.container_lista_devs {
+#ld_main .container_lista_devs {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     padding: 50px 0;
 }
 
-.lista_devs_conteudo {
+#ld_main .lista_devs_conteudo {
     width: 100%;
     max-width: 900px;
 
@@ -36,13 +36,13 @@
     color: var(--branco);
 }
 
-#main_listadevs h1 {
+#ld_main h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-#main_listadevs hr {
+#ld_main hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -51,16 +51,16 @@
     border-radius: 50%;
 }
 
-.lista_devs_conteudo form {
+#ld_main .lista_devs_conteudo form {
     width: 85%;
     padding: 20px 0;
 }
 
-.wrapper_lista {
+#ld_main .wrapper_lista {
     width: 85%;
 }
 
-.wrapper_form {
+#ld_main .wrapper_form {
     height: 95px;
     width: 85%;
     margin: 0 auto;
@@ -71,13 +71,13 @@
 
 }
 
-.wrapper_form label {
+#ld_main .wrapper_form label {
     font-family: var(--font2);
     text-transform: capitalize;
     font-size: 28px;
 }
 
-.campo-label input {
+#ld_main .campo-label input {
     height: 37px;
     width: 75%;
 
@@ -95,11 +95,11 @@
     caret-color: white;
 }
 
-.campo-label input:focus-visible {
+#ld_main .campo-label input:focus-visible {
     outline: 2px solid var(--branco);
 }
 
-.campo-label button {
+#ld_main .campo-label button {
     width: 20%;
 
     border: 4px solid var(--rosa);
@@ -111,24 +111,23 @@
     text-transform: uppercase;
 }
 
-.campo-label button:hover {
+#ld_main .campo-label button:hover {
     background-color: #8a214f;
     cursor: pointer;
 }
 
-.campo-label {
+#ld_main .campo-label {
     display: flex;
     justify-content: space-between;
 }
 
-.lista_devs_conteudo ul {
+#ld_main .lista_devs_conteudo ul {
     list-style: none;
     padding: 50px 0;
 }
 
-.lista_devs_conteudo li {
+#ld_main .lista_devs_conteudo li {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: solid 1px #ffffff34;
 }
-

@@ -1,5 +1,5 @@
 /* MAIN */
-#main_perfilusuario {
+#pu_main {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/images/background_login.png");
@@ -9,13 +9,13 @@
     background-position: center;
 }
 
-#main_perfilusuario .container {
+#pu_main .container {
     max-width: 1400px;
     width: 90%;
     margin: 0 auto;
 }
 
-.container_perfil_dev {
+#pu_main .container_perfil_dev {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
     padding: 50px 0;
 }
 
-.perfil_dev_conteudo {
+#pu_main .perfil_dev_conteudo {
     width: 100%;
     max-width: 1100px;
 
@@ -44,14 +44,14 @@
     color: var(--branco);
 }
 
-#main_perfilusuario h1 {
+#pu_main h1 {
     position: absolute;
     left: -999em;
     width: 1em;
     overflow: hidden;
 }
 
-.topo_dev {
+#pu_main .topo_dev {
     width: 100%;
     display: flex;
 
@@ -62,58 +62,58 @@
     margin-bottom: 50px;
 }
 
-.topo_dev img {
+#pu_main .topo_dev img {
     width: 230px;
     border-radius: 50%;
     /* margin-right: 100px; */
     margin-bottom: 30px;
 }
 
-.contato_local {
+#pu_main .contato_local {
     width: 100%;
 
     margin-bottom: 50px;
 }
 
-.contato_local svg {
+#pu_main .contato_local svg {
     width: 20px;
     fill: white;
     margin-right: 10px;
 }
 
-.contato a {
+#pu_main .contato a {
     color: white;
 }
 
-.contato,
-.local {
+#pu_main .contato,
+#pu_main .local {
     display: flex;
 }
 
-.contato>p,
-.local>img {
+#pu_main .contato>p,
+#pu_main .local>img {
     margin-right: 10px;
 }
 
-.contato,
-.techs>p {
+#pu_main .contato,
+#pu_main .techs>p {
     margin-bottom: 20px;
 }
 
-.perfil_dev_conteudo .techs {
+#pu_main .perfil_dev_conteudo .techs {
     width: 100%;
 
     /* margin-bottom: 50px; */
 }
 
-.lista_skills {
+#pu_main .lista_skills {
     max-width: 70%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.lista_skills span {
+#pu_main .lista_skills span {
     font-size: 14px;
     padding: 2px 10px;
 
@@ -126,14 +126,14 @@
     font-weight: 600;
 }
 
-.container_perfil_dev footer {
+#pu_main .container_perfil_dev footer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     margin-top: 50px;
 }
 
-#main_perfilusuario a {
+#pu_main a {
     width: 35px;
     fill: var(--branco);
 }

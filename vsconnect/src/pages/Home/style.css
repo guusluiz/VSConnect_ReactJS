@@ -1,31 +1,21 @@
-body {
-    background-color: #FAFAFA;
-}
-
-.container {
-    max-width: 1400px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-#main_home h1 {
+#home_main h1 {
     position: absolute;
     left: -999em;
     width: 1em;
     overflow: hidden;
 }
 
-#main_home h2 {
+#home_main h2 {
     font-family: var(--font1);
     font-size: 30px;
     text-transform: uppercase;
 }
 
-#main_home h3 {
+#home_main h3 {
     font-size: 28px;
 }
 
-.botao {
+#home_main .botao {
     font-family: var(--font1);
     color: var(--branco);
     text-transform: uppercase;
@@ -35,25 +25,19 @@ body {
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-#main_home ul li {
+#home_main ul li {
     text-transform: uppercase;
     font-size: 22px;
     margin: 10px 0;
     font-family: var(--font2);
 }
 
-#main_home ul li a {
-    text-decoration: none;
-    color: initial;
-}
-
-li::marker {
+#home_main li::marker {
     color: var(--azul);
 }
 
-
 /* BANNER */
-.banner {
+#home_main .banner {
     background-image: url("../../assets/images/banner-background.png");
     height: calc(100vh - 80px);
     min-height: 680px;
@@ -64,7 +48,7 @@ li::marker {
     align-items: center;
 }
 
-.banner_conteudo {
+#home_main .banner_conteudo {
     max-width: 700px;
     width: 90%;
     display: flex;
@@ -80,37 +64,37 @@ li::marker {
     border-radius: 100px;
 }
 
-.banner_slogan_l1 {
+#home_main .banner_slogan_l1 {
     font-size: 3.625em;
     font-family: var(--font1);
 }
 
-.banner_slogan_l2 {
+#home_main .banner_slogan_l2 {
     font-size: 1.5em;
     max-width: 550px;
     margin: 50px 0;
 }
 
-.banner_slogan_l3 {
+#home_main .banner_slogan_l3 {
     font-size: 1.375em;
     text-decoration: underline;
     font-weight: 200;
 }
 
-.banner_botoes {
+#home_main .banner_botoes {
     margin-top: 50px;
     width: 75%;
     display: flex;
     justify-content: space-between;
 }
 
-.banner_botao_dev {
+#home_main .banner_botao_dev {
     background: rgba(255, 255, 255, 0.05);
     padding: 10px 30px;
     border: 4px solid var(--rosa);
 }
 
-.banner_botao_cli {
+#home_main .banner_botao_cli {
     padding: 14px 73px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%);
 }
@@ -120,7 +104,7 @@ li::marker {
 
 
 /* PARA CLIENTES */
-.span_cliente {
+#home_main .span_cliente {
     background-color: var(--azul);
     width: 100%;
     max-width: 500px;
@@ -139,11 +123,11 @@ li::marker {
     top: -60px;
 }
 
-.span_cliente p {
+#home_main .span_cliente p {
     font-family: var(--font2);
 }
 
-.para_clientes {
+#home_main .para_clientes {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -152,27 +136,27 @@ li::marker {
     padding: 130px 0 100px 0;
 }
 
-.clientes_conteudo {
+#home_main .clientes_conteudo {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.para_devs img,
-.clientes_conteudo img {
+#home_main .para_devs img,
+#home_main .clientes_conteudo img {
     max-width: 550px;
     width: 50%;
     object-fit: contain;
 }
 
-.clientes_texto {
+#home_main .clientes_texto {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-family: var(--font2);
 }
 
-.clientes_botao_cli {
+#home_main .clientes_botao_cli {
     padding: 14px 50px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%);
 }
@@ -182,7 +166,7 @@ li::marker {
 
 
 /* CONEXAO */
-.conexao {
+#home_main .conexao {
     height: 300px;
     background-image:
         linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
@@ -198,14 +182,14 @@ li::marker {
 
 
 /* PARA DEVS */
-.para_devs {
+#home_main .para_devs {
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 100px 0;
 }
 
-.devs_texto {
+#home_main .devs_texto {
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
@@ -213,11 +197,11 @@ li::marker {
     font-family: var(--font2);
 }
 
-#main_home ul {
+#home_main ul{
     margin: 50px 0 50px 25px;
 }
 
-.clientes_botao_devs {
+#home_main .clientes_botao_devs {
     padding: 10px 50px;
     background: linear-gradient(272.99deg, rgba(9, 0, 114, 0.65) 0%, rgba(7, 12, 71, 0.7) 100%);
     border: 4px solid var(--rosa);
@@ -228,24 +212,24 @@ li::marker {
 
 
 /* SERVICOS */
-.servicos {
+#home_main .servicos {
     padding-bottom: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.servicos h2 {
+#home_main .servicos h2 {
     margin-bottom: 100px;
 }
 
-.servicos_cards {
+#home_main .servicos_cards {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.card {
+#home_main .card {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-style: italic;
     width: 48%;
@@ -263,17 +247,17 @@ li::marker {
     text-align: center;
 }
 
-.card img {
+#home_main .card img {
     position: absolute;
     top: -30px;
     width: 120px;
 }
 
-.card p {
+#home_main .card p {
     font-size: 18px;
 }
 
-.servicos a {
+#home_main .servicos a {
     margin-top: 30px;
     font-size: 18px;
     font-family: var(--font2);
@@ -284,108 +268,104 @@ li::marker {
 
 
 
+
 /* MEDIAS */
 @media screen and (max-width: 1366px) {
-    .conexao {
+    #home_main .conexao {
         background-attachment: scroll;
     }
 }
 
 @media screen and (max-width: 768px) {
-
-
-    /* BANNER */
-    .banner_conteudo {
+        /* BANNER */
+    #home_main .banner_conteudo{
         font-size: 14px;
         max-width: 500px;
     }
 
-    .banner_slogan_l2 {
+    #home_main .banner_slogan_l2{
         margin: 30px;
     }
 
-    .banner_botoes {
+    #home_main .banner_botoes{
         flex-direction: column;
         gap: 30px;
         margin-top: 30px;
     }
 
-    .banner_botoes a {
+    #home_main .banner_botoes a{
         align-self: center;
     }
 
-    .span_dicas img,
-    .para_devs img,
-    .clientes_conteudo img {
+
+    #home_main .span_dicas img,
+    #home_main .para_devs img,
+    #home_main .clientes_conteudo img{
         display: none;
     }
 
-    .clientes_texto,
-    .devs_texto {
+    #home_main .clientes_texto,
+    #home_main .devs_texto{
         text-align: center;
     }
 
-    .para_devs {
+    #home_main .para_devs{
         padding: 0;
     }
 
-    #main_home ul {
+    main ul {
         text-align: initial;
     }
 
     /* SERVICOS */
-    .servicos_cards {
+    #home_main .servicos_cards{
         flex-direction: column;
         align-items: center;
     }
 
-    .card {
+    #home_main .card{
         width: 100%;
     }
 
-    .card2 {
+    #home_main .card2{
         margin-top: 100px;
     }
-
-
 }
 
 @media screen and (max-width: 500px) {
-    .banner_conteudo {
+    #home_main .banner_conteudo {
         font-size: 13px;
     }
-
-    .span_cliente {
+    
+    #home_main .span_cliente{
         font-size: 18px;
     }
 
-    #main_home h2 {
+    #home_main h2{
         font-size: 22px;
     }
 
-    #main_home ul {
+    #home_main ul {
         margin: 40px 0;
     }
 
-    #main_home ul li {
+    #home_main ul li {
         font-size: 17px;
     }
 
-    .botao {
+    #home_main .botao {
         font-size: 16px;
     }
-
-    .clientes_botao_cli {
-        padding: 12px 40px;
+    
+    #home_main .clientes_botao_cli{
+        padding: 12px 40px;   
+    }
+    
+    #home_main .clientes_botao_devs{
+        padding: 9px 40px;   
     }
 
-    .clientes_botao_devs {
-        padding: 9px 40px;
-    }
-
-    .span_dicas_texto {
+    #home_main .span_dicas_texto {
         font-size: 18px;
     }
-
-
 }
